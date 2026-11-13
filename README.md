@@ -2,6 +2,8 @@
 
 A small desktop tool built with **Tkinter** that converts tab-separated (`.tsv` / `.txt`) files into Excel workbooks (`.xlsx`). It is designed to handle **rows with inconsistent column counts**, which is where `pandas.read_csv` usually fails.
 
+![TSV to XLSX Converter screenshot](screenshot.png)
+
 ## Features
 
 - Simple GUI: pick an input TSV file and an output XLSX file with file dialogs.
@@ -14,7 +16,13 @@ A small desktop tool built with **Tkinter** that converts tab-separated (`.tsv` 
 ## Requirements
 
 - Python 3.8 or newer (tested with Python 3.11)
-- Packages:
+- Packages — pandas and openpyxl:
+
+  ```bash
+  pip install -r requirements.txt
+  ```
+
+  or, equivalently:
 
   ```bash
   pip install pandas openpyxl
@@ -68,9 +76,12 @@ If an already-built EXE still looks blurry, rebuild it: DPI awareness has to be 
 
 ```
 .
-|-- tsv_to_xlsx.py    # the application (single file)
-|-- run_gui.pyw       # double-click launcher: runs the app without a console
-`-- README.md         # this file
+|-- tsv_to_xlsx.py     # the application (single file)
+|-- run_gui.pyw        # double-click launcher: runs the app without a console
+|-- requirements.txt   # pandas + openpyxl
+|-- screenshot.png     # image used by this README
+|-- .gitignore         # keeps caches, builds and .xlsx output out of git
+`-- README.md          # this file
 ```
 
 ## Known limitations

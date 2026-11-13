@@ -1,6 +1,23 @@
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# PyInstaller output
 build/
 dist/
 *.spec
+
+# Generated workbooks (inputs/outputs stay local)
 *.xlsx
+~$*.xlsx
+
+# Editors and OS files
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
